@@ -1,7 +1,9 @@
 package by.varyvoda.matvey;
 
+import by.varyvoda.matvey.entity.Book;
 import by.varyvoda.matvey.strategy.*;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -42,6 +44,16 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Task 15
+        Comparator<Book> nameComparator =
+                Comparator.comparing(Book::getTitle);
+        Comparator<Book> nameAndAuthorComparator =
+                Comparator.comparing(Book::getTitle).thenComparing(Book::getAuthor);
+        Comparator<Book> authorAndNameComparator =
+                Comparator.comparing(Book::getAuthor).thenComparing(Book::getTitle);
+        Comparator<Book> authorNameAndPriceComparator =
+                Comparator.comparing(Book::getAuthor).thenComparing(Book::getTitle).thenComparing(Book::getPrice);
+
         while(choose()) {
             System.out.println("\n-------------------------\n");
         }
