@@ -1,0 +1,6 @@
+.idea
+*.class
+out/
+myOut/
+*.iml
+sources.txt
