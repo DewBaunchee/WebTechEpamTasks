@@ -24,7 +24,7 @@ public class Main {
     }
 
     public static boolean choose() {
-        System.out.println("Choose:");
+        System.out.println("Choose (or \"exit\"):");
         strategies.keySet().forEach(key -> System.out.println("\t" + key + ": " + strategies.get(key).description()));
 
         String choice = in.nextLine().trim().toLowerCase();
