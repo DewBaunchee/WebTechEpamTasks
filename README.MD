@@ -10,7 +10,11 @@
 
 ### Example:
 dir /s /B *.java > sources.txt
+  
 javac @sources.txt -d myOut/by
+  
 cd myOut
+  
 jar cvf myJar.jar by
+  
 java -cp myJar.jar by.varyvoda.matvey.Main
